@@ -72,29 +72,6 @@ public class HomeActivity extends AppCompatActivity {
                 loadPic();
             }
         });
-//       URL.setURLStreamHandlerFactory(new OkUrlFactory());
-//        speed = (TextView) findViewById(R.id.tv_speed);
-
-//        handler = new Handler() {
-//            @Override
-//            public void handleMessage(Message msg) {
-//                if (msg.what == 1) {
-//                    speed.setText(msg.obj + "kb/s");
-//                    if (service != null) {
-//                        service.setSpeed(msg.obj + "kb/s");
-//                    }
-//                }
-//                super.handleMessage(msg);
-//            }
-//        };
-//        trafficBean = new TrafficBean(this, handler, 12580);
-//        trafficBean.startCalculateNetSpeed();
-
-
-//        Log.d("TAG", "总流量 = " + trafficBean.getTrafficInfo());
-//        Intent intent = new Intent(HomeActivity.this, ManagerService.class);
-//        bindService(intent, conn, Context.BIND_AUTO_CREATE);
-//        downLoadFile("http://sw.bos.baidu.com/sw-search-sp/software/c03ab647377e5/androidstudio_2.3.3.0.exe", Environment.getExternalStorageDirectory().getPath() + "/temp");
 
     }
 
@@ -113,25 +90,6 @@ public class HomeActivity extends AppCompatActivity {
             service = null;
         }
     };
-
-    public void downLoadFile(String fileUrl, final String destFileDir) {
-        DownloadUtil.getInstance().download(fileUrl, destFileDir, new DownloadUtil.OnDownloadListener() {
-            @Override
-            public void onDownloadSuccess(String path) {
-
-            }
-
-            @Override
-            public void onDownloading(int progress) {
-
-            }
-
-            @Override
-            public void onDownloadFailed() {
-
-            }
-        });
-    }
 
     @Override
     protected void onDestroy() {
